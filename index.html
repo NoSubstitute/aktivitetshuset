@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Välkommen till Aktivitetshuset</title>
+  
+  <!-- Google Fonts: Inter for clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#2563eb',
+              600: '#1d4ed8',
+              700: '#1e40af',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      min-height: 100vh;
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    }
+
+    .pulse-subtle {
+      animation: pulseGlow 3s infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.35);
+      }
+      50% {
+        box-shadow: 0 6px 20px 0 rgba(37, 99, 235, 0.55);
+      }
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center p-4 sm:p-6 md:p-10 font-sans text-slate-800 antialiased">
+
+  <main class="w-full max-w-2xl glass-card rounded-3xl p-6 sm:p-10 border border-slate-200/80 transition-all">
+    
+    <!-- Header Section -->
+    <header class="text-center mb-8">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand-50 text-brand-600 mb-4 shadow-sm border border-brand-100">
+        <!-- Main Computer/Globe Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-3">
+        Hej och välkommen till Aktivitetshuset!
+      </h1>
+      <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-lg mx-auto">
+        Datorn du sitter vid får lov att användas under följande förutsättningar.
+      </p>
+    </header>
+
+    <!-- Rules List Cards -->
+    <section class="space-y-3 sm:space-y-4 mb-8">
+      
+      <!-- Rule 1: No Local Storage -->
+      <div class="flex items-start sm:items-center p-4 sm:p-5 rounded-2xl bg-white/70 border border-slate-200/60 shadow-sm hover:shadow-md transition-all">
+        <div class="flex-shrink-0 p-3 rounded-xl bg-amber-50 text-amber-600 mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+        </div>
+        <div>
+          <p class="font-medium text-slate-800 text-base sm:text-lg">
+            Spara ingen information lokalt på datorn.
+          </p>
+          <p class="text-xs sm:text-sm text-slate-500 mt-0.5">
+            Filer sparas inte permanent och kommer att raderas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Rule 2: Kindness and Respect -->
+      <div class="flex items-start sm:items-center p-4 sm:p-5 rounded-2xl bg-white/70 border border-slate-200/60 shadow-sm hover:shadow-md transition-all">
+        <div class="flex-shrink-0 p-3 rounded-xl bg-rose-50 text-rose-600 mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-4.5-4.5M12 20.364l-7.682-7.682M12 5.5l1.5-1.5m0 0a3.001 3.001 0 014.243 0l.5.5M13.5 4l-1.5 1.5" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+          </svg>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-900 text-base sm:text-lg">
+            Be kind, be respectful.
+          </p>
+          <p class="text-xs sm:text-sm text-slate-500 mt-0.5">
+            Visa hänsyn till alla andra användare i lokalen.
+          </p>
+        </div>
+      </div>
+
+      <!-- Rule 3: Logout / Shut Down -->
+      <div class="flex items-start sm:items-center p-4 sm:p-5 rounded-2xl bg-white/70 border border-slate-200/60 shadow-sm hover:shadow-md transition-all">
+        <div class="flex-shrink-0 p-3 rounded-xl bg-emerald-50 text-emerald-600 mr-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+        </div>
+        <div>
+          <p class="font-medium text-slate-800 text-base sm:text-lg">
+            Glöm inte att logga ut och stänga av datorn när du är klar.
+          </p>
+          <p class="text-xs sm:text-sm text-slate-500 mt-0.5">
+            Lämna platsen snygg och redo för nästa person.
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Call to Action Button -->
+    <div class="text-center pt-2">
+      <a 
+        href="https://html.duckduckgo.com/html" 
+        class="pulse-subtle inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-brand-600 hover:bg-brand-700 active:scale-[0.98] text-white font-semibold text-lg rounded-2xl transition-all duration-200 shadow-lg shadow-brand-500/30 group"
+      >
+        <span>Klicka här för att börja surfa</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Footer Note -->
+    <footer class="mt-8 text-center text-xs text-slate-400 border-t border-slate-200/60 pt-4">
+      &copy; Aktivitetshuset &bull; Offentlig datorstation
+    </footer>
+
+  </main>
+
+</body>
+</html>
